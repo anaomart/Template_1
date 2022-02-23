@@ -1,0 +1,178 @@
+:root {
+    --main-color:#10cab7;
+}
+
+
+/* Start Of Globle Rules  */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Small */
+@media ( min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+/* Mudium */
+@media (min-width: 992px){
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px
+    }
+}
+.container {
+    padding: 15px;
+    padding-top: 0;
+    margin-right: auto;
+    margin-left: auto ;
+    display:flex ;
+    justify-content: space-between; 
+    align-items: center;
+}
+.header{
+    padding:20px;
+}
+.header .logo {
+    width: 60px;
+}
+.header .links .icon {
+    width: 30px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:end;
+
+}
+
+.header .links .icon span {
+    background-color:#333;
+    margin-bottom: 5px;
+    height: 2px;
+}
+.header .links .icon span:first-child {
+    width: 100%;
+}
+.header .links .icon span:nth-child(2){
+    width: 60%;
+}
+.header .links .icon span:nth-child(3) {
+    width: 100%;
+}
+.header .links:hover .icon span:nth-child(2){
+    width: 100%;
+    transition: 0.3s;
+}
+.header .links:hover ul{
+    display: block;
+}
+    
+
+.header .links{
+    position: relative;
+}
+.header .links ul  {
+    list-style: none;
+    margin:0;
+    padding: 0;
+    position:absolute;
+    min-width: 200px;
+    right:0;
+    top:calc(100% + 5px);
+    transition:1s;
+    background-color:#f6f6f6;
+    display:none;
+    z-index: 1;
+}
+.header .links ul li a {
+    display:block;
+    padding: 15px;
+    color:#333;
+    transition: 0.3s ;
+    text-decoration: none;
+}
+.header .links ul li:not(:last-child){
+    border-bottom:1px solid #333;
+}
+.header .links ul::before {
+    content:"";
+    border-style:solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    border-width:10px;
+    position: absolute;
+    right:5px;
+    top: -15px;
+}
+.header .links ul a:hover {
+    padding-left: 30px ;
+}
+/* Start landing  */
+.landing {
+    background-image: url(../images/landing.jpg);
+    background-size: cover;  
+    height: calc(100vh - 64px);
+    position: relative;    
+}
+.landing .intro-text {
+    position: absolute;
+    width: 320px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    max-width:100%;
+
+}
+.landing .intro-text h1{
+    margin: 0 ;
+    font-weight: bold;
+    font-size:50px;
+    color:var(--main-color);
+}
+.landing .intro-text p {
+    font-size:20px;
+    line-height:1.8;
+}
+/* Start Of Features  */
+
+
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color:#f6f6f6;
+}
+.features .container {
+    display :grid ;
+    grid-template-columns:repeat(auto-fill , minmax(300px,1fr));
+    gap:20px;
+    text-align: center;
+}
+.features .container  .feat i {
+    color:var(--main-color);
+}
+.features .container .feat p {
+    line-height: 1.8;
+    color: #777;
+}
+
+/* End Of Features  */
+
+
+
+
+
+
+
+
+
+
+/* End  landing  */
